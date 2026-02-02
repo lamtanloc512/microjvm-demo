@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.microjvm</groupId>
+    <artifactId>microjvm-starter-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>org.ltl</groupId>
+  <artifactId>microjvm-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>microjvm-demo</name>
+  <url>http://www.example.com</url>
+
+  <properties>
+    <start-class>org.ltl.App</start-class>
+  </properties>
+
+  <dependencies>
+    <!-- Web Framework (bao gồm DI, HTTP, JSON) -->
+    <dependency>
+      <groupId>org.microjvm</groupId>
+      <artifactId>microjvm-web</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.microjvm</groupId>
+      <artifactId>microjvm-di-processor</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.microjvm</groupId>
+      <artifactId>microjvm-boot</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.microjvm</groupId>
+      <artifactId>microjvm-data-jpa</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- (Optional) Netty cho high concurrency -->
+    <dependency>
+      <groupId>org.microjvm</groupId>
+      <artifactId>microjvm-netty</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>8.3.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>

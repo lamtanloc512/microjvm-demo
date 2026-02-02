@@ -1,0 +1,27 @@
+services:
+  db:
+    image: docker.io/library/mysql:8.0
+    container_name: microjvm-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "p@ssword"
+      MYSQL_DATABASE: "microjvm_db"
+    ports:
+      - "3306:3306"
+    volumes:
+      - microjvm_mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: docker.io/library/phpmyadmin:latest
+    container_name: microjvm-phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: "p@ssword"
+    ports:
+      - "9998:80"
+    depends_on:
+      - db
+
+volumes:
+  microjvm_mysql_data:
